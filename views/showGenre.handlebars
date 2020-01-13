@@ -1,0 +1,18 @@
+<table class="ui celled table">
+<thead>
+    <tr>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each genre}}
+    <tr>
+      <td>{{this.name}}</td>
+        <td>
+            <a class="ui teal basic button" href="/genre/{{this.id}}/edit">Edit</a>
+        </td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>

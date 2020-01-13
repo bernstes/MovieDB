@@ -1,0 +1,24 @@
+{{#each movies}}
+  <form action='/movies/{{this.id}}?_method=PUT' method='POST'>
+  <fieldset>
+    <legend>Edit Movie: {{this.title}}</legend>
+    Title (required):<br>
+    <input type="text" required name="title" value="{{this.title}}"><br>
+    Year:<br>
+    <input type="text" name="year" value="{{this.year}}"><br>
+    Duration:<br>
+    <input type="text" name="duration" value="{{this.duration}}"><br>
+    <div>
+      
+        <label for="genre">Genre (required):</label>
+        <select  required name='genre_id'>
+          <option value="{{this.genre_id}}">{{name}}</option>{{/each}}
+        {{#each genres}}
+          <option value='{{genre_id}}'>{{name}}</option>
+        {{/each}}
+        </select>
+    </div>
+    
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>

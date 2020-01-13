@@ -1,0 +1,23 @@
+<form action='/acts_in' method = 'POST'>
+    <div>
+        <label for="actor_id">Name:</label>
+        <select required name='actor_id'>
+          <option value=''>Select An Actor</option>
+        {{#each actors}}
+          <option value='{{actor_id}}'>{{first_name}} {{last_name}}</option>
+        {{/each}}
+    </select>
+    </div>
+    <div>
+        <label for="title">Movie Title:</label>
+        <select required name='movie_id'>
+          <option value=''>Select A Movie</option>
+        {{#each movies}}
+          <option value='{{movie_id}}'>{{title}}</option>
+        {{/each}}
+        </select>
+    </div>
+    <div class="button">
+  <button type="submit">Submit</button>
+    </div>
+</form>

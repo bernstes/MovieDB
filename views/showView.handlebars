@@ -1,0 +1,27 @@
+<table class="ui celled table">
+<thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Movie Title</th>
+      <th>Rating</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each views}}
+    <tr>
+      <td>{{this.first_name}}</td>
+        <td>{{this.last_name}}</td>
+        <td>{{this.title}}</td>
+        <td>{{this.rating}}</td>
+        <td>
+            <a class="ui teal basic button" href="/views/{{this.user_movie_id}}/edit">Edit</a>
+        
+            <form id = "delete" action='/views/{{this.user_movie_id}}?_method=DELETE' method='POST'>
+            <button class="ui red basic button">Delete</button></form>
+        </td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,21 @@
+<div class ='ui huge header'>Search Results</div>
+<table class="ui celled table">
+<thead>
+    <tr>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Duration</th>
+      <th>Genre</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each movies}}
+    <tr>
+      <td>{{this.title}}</td>
+      <td>{{this.year}}</td>
+      <td>{{this.duration}}</td>
+      <td>{{this.name}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>

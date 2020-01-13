@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Streaming Movies Database</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.css" />
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+</head>
+
+<body>
+    <div class="ui inverted pointing menu">
+        <i class="play circle outline icon big"></i>
+        <a class="item" href='/movies'>
+    Movies
+  </a>
+        <a class="item" href="/movies/new">
+    Add Movie
+  </a>
+        <a class="item" href='/genre'>
+    Genres
+  </a>
+        <a class="item" href='/genre/new'>
+    Add Genre
+  </a>
+  </a>
+        <a class="item" href='/user'>
+    Users
+  </a>
+        <a class="item" href='/user/new'>
+    Add User
+  </a>
+  </a>
+        <a class="item" href='/actors'>
+    Actors
+  </a>
+        <a class="item" href='/actors/new'>
+    Add Actor
+  </a>
+  </a>
+        <a class="item" href='/views'>
+    Views
+  </a>
+        <a class="item" href='/views/new'>
+    Add View
+  </a>
+  </a>
+        <a class="item" href='/acts_in'>
+    Acts-In
+  </a>
+        <a class="item" href='/acts_in/new'>
+    Add Acts-In
+  </a>
+  <li class="item">
+    <div class="ui category search">
+  <div class="ui icon input">
+    <form action = "/search" method='GET'>
+    <input class="prompt" name = "title" type="text" placeholder="Search movies by title...">
+    <button id = "searchItem"><i class="search icon"></i></button></form>
+  </div>
+  </div>
+</li>
+  <div class="results"></div>
+</div>
+    </div>
+    {{{body}}}
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.js"></script>
+    <script src='/app.js'></script>
+</body>
+
+</html>

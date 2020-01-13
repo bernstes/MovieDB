@@ -1,0 +1,20 @@
+<form action="/movies" method='POST'>
+  <fieldset>
+    <legend>New Movie (required):</legend>
+    Title:<br>
+    <input type="text" required name="title"><br>
+    Year:<br>
+    <input type="text" name="year"><br>
+    Duration:<br>
+    <input type="text" name="duration"><br>
+    <div>
+        <label for="genre">Genre (required):</label>
+        <select required name='genre_id'>
+        {{#each genres}}
+          <option value='{{genre_id}}'>{{name}}</option>
+        {{/each}}
+        </select>
+    </div>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>

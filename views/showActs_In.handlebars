@@ -1,0 +1,26 @@
+<table class="ui celled table">
+<thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Movie Title</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each acts_in}}
+    <tr>
+      <td>{{this.first_name}}</td>
+        <td>{{this.last_name}}</td>
+        <td>{{this.title}}</td>
+        <td>
+          <!-- CANNOT EDIT ACTS_IN RELATIONSHIP -> edit actors or movies directly
+            <a class="ui teal basic button" href="/acts_in/{{this.movie_actor_id}}/edit">Edit</a> -->
+        
+            <form id = "delete" action='/acts_in/{{this.movie_actor_id}}?_method=DELETE' method='POST'>
+            <button class="ui red basic button">Delete</button></form>
+        </td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>

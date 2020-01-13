@@ -1,0 +1,16 @@
+<table class="ui celled table">
+<thead>
+    <tr>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each user}}
+    <tr>
+      <td>{{this.last_name}}, {{this.first_name}}</td>
+      <td><a href='/user/{{this.id}}'>View</a>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>
